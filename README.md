@@ -1,58 +1,59 @@
-# Discord-Account-Generator
-For edu purpose only uses gmailnator and random username to gen the acc. Proof of concept of how the creation of Discord accounts can be automated without the need to type/click buttons on browser using XPATHS.
+# Generador de cuentas de Discord
+Solo para fines educativos. Utiliza Gmailnator y un nombre de usuario aleatorio para generar la cuenta. Prueba de concepto de cómo automatizar la creación de cuentas de Discord sin necesidad de escribir ni hacer clic en botones del navegador mediante XPATH.
 
-## About
-A script that automates creating discord accounts. It shows how accounts can be created automatically without the user typing unless there is a captcha (h-Captcha just needs to be clicked) . It automatically verifies your Discord account via email for you and automatically saves login info in `login.txt` in `email:password:token` format. This is used for educational purposes only.
+## Acerca de
+Un script que automatiza la creación de cuentas de Discord. Muestra cómo se pueden crear cuentas automáticamente sin que el usuario escriba nada, a menos que haya un captcha (en el caso de h-Captcha, basta con hacer clic). Verifica automáticamente tu cuenta de Discord por correo electrónico y guarda automáticamente la información de inicio de sesión en `login.txt` con el formato `correo electrónico:contraseña:token`. Solo para fines educativos.
 
-## Features
-- Auto scrape email
-- Random username from list
-- Random password
-- Random date
-- Auto-email-verify
-- Automatically get Discord token and other login info
-- Proxy support
-- Multi-threading
+## Características
+- Extracción automática de correo electrónico
+- Nombre de usuario aleatorio de una lista
+- Contraseña aleatoria
+- Fecha aleatoria
+- Verificación automática de correo electrónico
+- Obtención automática del token de Discord y otra información de inicio de sesión
+- Compatibilidad con proxy
+- Multihilo
+## Vista previa
+![Imagen](https://i.imgur.com/PSpaUEB.png)
 
-## Preview
-![Picture](https://i.imgur.com/PSpaUEB.png)
+## Uso
+1. Puedes personalizar los nombres de usuario editándolos en el archivo discord_usernames.txt.
 
-## Usage
-1. You can customize usernames by editing the usernames in discord_usernames.txt.
-2. Run the file and use normal mode if you are a inexperienced with proxies and theading.
+2. Ejecuta el archivo y usa el modo normal si no tienes experiencia con proxies y multihilo.
 
-### Get Python
-If you dont have python installed, download python and make sure you click on the 'ADD TO PATH' option during the installation.
+### Obtener Python
+Si no tienes Python instalado, descárgalo y asegúrate de hacer clic en la opción "Añadir a la ruta" durante la instalación.
 
-### Run via Python
-1. install the required modules
+### Ejecutar con Python
+1. Instala los módulos necesarios
 ```
-run requirements.bat
-```
-
-2. To run the script..
-```
-open discordgenerator.py or python it from cmd
+Ejecuta requirements.bat
 ```
 
-#### Proxy support
-- If you want to use proxies, simply paste the proxies in config/proxies.txt.  If you want to stop using proxies, just remove all the proxies from the .txt file. The script automatically checks for proxies on startup. HTTP proxies are only supported as of now. If the proxies are not alive, the script will throw a WebDriver error.
+2. Para ejecutar el script:
 
-#### Threading mode 
-- Uses multiple chrome windows
-- Only run this when you have proxies or else one of you Chrome windows will get rate limited.
-- Do put more than 6 threads unless you think your PC can handle it. I recommend using 2-3 threads.
+```
+Abre discordgenerator.py o ejecútalo con Python desde la línea de comandos
+```
 
-#### No Threading
-- This only uses one chrome window. 
+#### Compatibilidad con proxies
+- Si quieres usar proxies, simplemente pega la configuración de los proxies en config/proxies.txt. Si quieres dejar de usar proxies, elimínalos del archivo .txt. El script comprueba automáticamente si hay proxies al iniciarse. Por ahora, solo se admiten proxies HTTP. Si los proxies no están activos, el script mostrará un error de WebDriver.
 
-#### FAQ
-IF it doesnt open...
-1. Make sure your chromedriver.exe file is the same version as your Chrome web browser version this one is 91 
-2. Download the latest version chromedriver.exe: https://chromedriver.chromium.org/downloads
-3. Then replace the chromedriver.exe file in the folder.
+#### Modo multihilo
+- Usa varias ventanas de Chrome
+- Ejecuta esto solo si tienes proxies; de lo contrario, una de tus ventanas de Chrome tendrá un límite de solicitudes.
 
-Where can i found my generated accounts?
+- No uses más de 6 hilos a menos que creas que tu PC puede soportarlo. Recomiendo usar 2 o 3 hilos.
 
-1. It is located in the output folder. Open up login.txt to see the accounts 
-that has been generated.
+#### Sin subprocesos
+- Solo se usa una ventana de Chrome.
+
+#### Preguntas frecuentes
+Si no se abre...
+1. Asegúrate de que el archivo chromedriver.exe sea de la misma versión que tu navegador Chrome (en este caso, la versión 91).
+2. Descarga la última versión de chromedriver.exe: https://chromedriver.chromium.org/downloads
+3. Reemplaza el archivo chromedriver.exe en la carpeta.
+
+¿Dónde puedo encontrar mis cuentas generadas?
+
+1. Se encuentran en la carpeta de salida. Abre login.txt para ver las cuentas que se han generado. 
